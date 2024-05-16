@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#95CD54"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calorie Calculator"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <!--age-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Age"
+            android:textColor="#CC0E4E"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/agetext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="250dp"
+            android:background="@drawable/shape"
+            android:inputType="number"
+            android:textSize="24dp"
+            android:elevation="5dp"
+            android:backgroundTint="@color/gray"
+            />
+
+
+    </LinearLayout>
+
+    <!--gander-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Gender"
+            android:textColor="#CC0E4E"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"/>
+
+        <RadioButton
+            android:id="@+id/selectedmale"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Male"
+            android:textColor="@color/black"
+            android:buttonTint="@color/my_secondary"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Female"
+            android:textColor="@color/black"
+            android:id="@+id/selectedfemale"
+            android:buttonTint="@color/my_secondary"/>
+
+
+
+    </LinearLayout>
+
+    <!--height-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Height"
+            android:textColor="#CC0E4E"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/shape"
+            android:hint="cm"
+            android:textSize="24dp"
+            android:inputType="number"
+            android:id="@+id/heighttext"
+            android:elevation="5dp"
+            android:backgroundTint="@color/gray"/>
+
+
+    </LinearLayout>
+
+    <!--Weight-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Weight"
+            android:textColor="#CC0E4E"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:textSize="24dp"
+            android:hint="kg"
+            android:layout_marginRight="100dp"
+            android:inputType="number"
+            android:id="@+id/weighttext"
+            android:elevation="5dp"
+            android:backgroundTint="@color/gray"/>
+
+
+    </LinearLayout>
+
+    <!--activity-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Activityt"
+            android:textColor="#CC0E4E"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complate_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_margin="10dp"
+        android:backgroundTint="#CC0E4E"
+        android:textSize="20dp"
+        android:id="@+id/calculatebutton"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:id="@+id/caloriesdayanswer"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="end"
+        android:id="@+id/clearbutton"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>
